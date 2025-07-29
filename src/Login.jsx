@@ -161,7 +161,19 @@ function Login({ onLogin }) {
         Your browser does not support the video tag.
       </video>
       <div className="card p-4 shadow" style={{ minWidth: "350px", zIndex: 1 }}>
-        <h2 className="mb-4 text-center">{showSignUp ? "Register" : "Login"}</h2>
+        <h2 className="mb-1 text-center">{showSignUp ? "Register" : "Login"}</h2>
+        {!showSignUp && (
+          <div
+            className="text-center mb-3"
+            style={{
+              color: "#888",
+              fontSize: "150%",
+              marginTop: "-4px"
+            }}
+          >
+            Welcome back
+          </div>
+        )}
         {!showSignUp ? (
           <>
             <div className="mb-3">
